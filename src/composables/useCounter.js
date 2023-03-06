@@ -1,15 +1,20 @@
-// composables/useCounter.js
-
 import { computed } from 'vue'
 import { useStore } from 'vuex'
+
 
 export default function useCounter() {
   const store = useStore()
   
   const count = computed(() => store.state.counter.count)
+
+  // const previousCount = computed(() => {
+  //   return store.state.counter.count - store.state.counter.step;
+  // });
   
   function increment() {
     store.commit('counter/increment')
+    // console.log('increment')
+    // console.log(previousCount)
   }
 
   function decrement() {
@@ -22,7 +27,13 @@ export default function useCounter() {
 
   function reset() {
     store.commit('counter/reset')
+    setValue(0)
   }
+
+  // function countPrev() {
+  //   store.commit('counter/previousCount')
+  //   console.log('previousCount')
+  // }
 
   return {
     count,
@@ -30,5 +41,7 @@ export default function useCounter() {
     decrement,
     setValue,
     reset,
+    // countPrev,
+    // previousCount,
   }
 }

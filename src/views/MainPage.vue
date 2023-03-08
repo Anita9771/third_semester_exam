@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Counter App </h1>
     <div class="counter">
-      <div class="count">{{ counter.count }}</div>
+      <div class="count" id="count">{{ counter.count }}</div>
       <div class="count-btns">
         <button class="count-btn" @click="counter.increment">
           <box-icon type="solid" name="up-arrow" color='#35495e' ></box-icon>
@@ -69,7 +69,7 @@ export default {
   font-size: 5rem;
   text-align: center;
   margin-top: -10rem;
-  transition: width 1s ease-in-out 0.5s;
+   animation: bounce 0.5s ease-in-out;
 }
 
 .count-btn{
@@ -116,10 +116,37 @@ h1{
   outline: none;
   color: #35495e;
   background: transparent;
+  font-size: 1.2rem;
 }
 
 .value-container button:hover{
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 </style>
 

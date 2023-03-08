@@ -13,8 +13,6 @@ export default function useCounter() {
   
   function increment() {
     store.commit('counter/increment')
-    // console.log('increment')
-    // console.log(previousCount)
   }
 
   function decrement() {

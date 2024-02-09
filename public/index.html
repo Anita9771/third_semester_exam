@@ -5,6 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+     <!-- Strict-Transport-Security (HSTS) -->
+     <meta
+     http-equiv="Content-Security-Policy"
+     content="upgrade-insecure-requests"
+   />
+
+   <!-- X-Frame-Options -->
+   <meta http-equiv="X-Frame-Options" content="DENY" />
+
+   <!-- X-Content-Type-Options -->
+   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+   <!-- Referrer Policy -->
+   <meta name="referrer" content="no-referrer" />
+
+   <!-- Permission Policy (example on an iframe) -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src 'self'; script-src 'self' https://trusted.cdn.com; ...">
+
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>

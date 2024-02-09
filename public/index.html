@@ -6,25 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
 
-     <!-- Strict-Transport-Security (HSTS) -->
-     <meta
-     http-equiv="Content-Security-Policy"
-     content="upgrade-insecure-requests"
-   />
-
-   <!-- X-Frame-Options -->
-   <meta http-equiv="X-Frame-Options" content="DENY" />
-
-   <!-- X-Content-Type-Options -->
-   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-
-   <!-- Referrer Policy -->
-   <meta name="referrer" content="no-referrer" />
-
-   <!-- Permission Policy (example on an iframe) -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-   <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src 'self'; script-src 'self' https://trusted.cdn.com; ...">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+<meta name="permission-policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()" />
+<meta name="referrer" content="no-referrer" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="DENY" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; report-uri /csp-report-endpoint">
 
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
